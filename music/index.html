@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button value="monke.mp3">monke</button>
+    <button value="putin.mp3">Wide Putin</button>
+    <button value="rushe.mp3">Rush Piggies</button>
+    <button>stop</button>
+    <script>
+        let audio= new Audio()
+        let btnArr=document.querySelectorAll('button')
+        btnArr.forEach(o=>o.addEventListener('click',(event)=>{
+console.log('ok',event.target.value)
+audio.src=event.target.value
+audio.play()
+        }))
+    </script>
+</body>
+</html>
